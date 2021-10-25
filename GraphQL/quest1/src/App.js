@@ -19,21 +19,18 @@ const GET_LAUNCHES = gql(`
 `);
 function App() {
   const { loading, error, data } = useQuery(GET_LAUNCHES);
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <h1>Error :(</h1>;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {data.launches.map((lunch) => (
+          <ul>
+            <li>{lunch.launch_date_utc}</li>
+            <li>{lunch.details}</li>
+          </ul>
+        ))}
       </header>
     </div>
   );
