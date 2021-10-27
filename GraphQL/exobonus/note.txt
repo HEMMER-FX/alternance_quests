@@ -1,0 +1,7 @@
+initialisation 
+=> npm init 
+dépendance 
+=>npm i -D typescript ts-node ts-node-dev
+=> tsc --init
+
+sudo apt install node-typescript
