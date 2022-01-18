@@ -1,0 +1,12 @@
+version: '2.2'
+services: 
+  server:
+      image: express-docker
+      ports: 
+          - 5050:5000
+  mongodb:
+      image: mongo
+  client:
+      image: quete3_client
+      ports:
+          - 8080:3000
