@@ -1,0 +1,3 @@
+[submodule "CI8github"]
+	path = CI8github
+	url = https://github.com/HEMMER-FX/alternance_quests.git
